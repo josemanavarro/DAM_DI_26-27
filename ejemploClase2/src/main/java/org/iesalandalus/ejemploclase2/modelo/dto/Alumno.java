@@ -52,5 +52,8 @@ public class Alumno {
         return s;
     }
     
-    
+    public static String[] getColumnasArray(){
+        String[] columnas = {"Nombre","Apellidos","Edad"};
+        return columnas;
+    }
 }
