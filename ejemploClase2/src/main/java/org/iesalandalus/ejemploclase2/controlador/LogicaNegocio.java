@@ -30,4 +30,11 @@ public class LogicaNegocio {
         listaAlumnos.add(alumno);
     }
     
+    public int elementos(){
+        return listaAlumnos.size();
+    }
+    
+    public Alumno getAlumnoNumero(int i){
+        return listaAlumnos.get(i);
+    }
 }
