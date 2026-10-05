@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import org.iesalandalus.ejemploclase2.controlador.LogicaNegocio;
 import org.iesalandalus.ejemploclase2.modelo.Alumno;
+import org.iesalandalus.ejemploclase2.modelo.modelosTabla.AlumnoTableModel;
 
 /**
  *
@@ -17,13 +18,16 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameVentanaPrincipal.class.getName());
     private LogicaNegocio ln;
+    private AlumnoTableModel atm;
     
     /**
      * Creates new form JFrameVentanaPrincipal
+     * @param ln
      */
     public JFrameVentanaPrincipal(LogicaNegocio ln) {
         initComponents();
-        this.ln = ln;
+        this.ln = ln;        
+        actualizarTabla();
     }
 
     /**
@@ -121,9 +125,12 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void anadirAlumno(Alumno alumno) {
-        //DefaultTableModel modelo = (DefaultTableModel)jTableAlumnos.getModel();
-        //modelo.addRow(alumno.getToStringArray());
-        ln.insertarAlumno(alumno);
-        
+        ln.insertarAlumno(alumno);         
+        actualizarTabla();
+    }
+    
+    private void actualizarTabla(){   
+        this.atm = new AlumnoTableModel(ln);
+        this.jTableAlumnos.setModel(atm);
     }
 }
