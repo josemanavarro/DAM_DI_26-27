@@ -4,7 +4,7 @@
  */
 package org.iesalandalus.ejemploclase2.vista;
 
-import org.iesalandalus.ejemploclase2.modelo.Alumno;
+import org.iesalandalus.ejemploclase2.modelo.dto.Alumno;
 import org.iesalandalus.ejemploclase2.vista.JFrameVentanaPrincipal;
 
 /**

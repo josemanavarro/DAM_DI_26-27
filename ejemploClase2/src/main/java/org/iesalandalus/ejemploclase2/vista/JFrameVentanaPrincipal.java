@@ -7,7 +7,7 @@ package org.iesalandalus.ejemploclase2.vista;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import org.iesalandalus.ejemploclase2.controlador.LogicaNegocio;
-import org.iesalandalus.ejemploclase2.modelo.Alumno;
+import org.iesalandalus.ejemploclase2.modelo.dto.Alumno;
 import org.iesalandalus.ejemploclase2.modelo.modelosTabla.AlumnoTableModel;
 
 /**

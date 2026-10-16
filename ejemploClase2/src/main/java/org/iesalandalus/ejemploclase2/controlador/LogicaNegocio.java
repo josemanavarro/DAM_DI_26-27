@@ -6,7 +6,7 @@ package org.iesalandalus.ejemploclase2.controlador;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.iesalandalus.ejemploclase2.modelo.Alumno;
+import org.iesalandalus.ejemploclase2.modelo.dto.Alumno;
 
 /**
  *

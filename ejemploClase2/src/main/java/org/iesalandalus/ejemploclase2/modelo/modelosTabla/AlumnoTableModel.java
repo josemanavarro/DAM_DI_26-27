@@ -6,7 +6,8 @@ package org.iesalandalus.ejemploclase2.modelo.modelosTabla;
 
 import javax.swing.table.AbstractTableModel;
 import org.iesalandalus.ejemploclase2.controlador.LogicaNegocio;
-import org.iesalandalus.ejemploclase2.modelo.Alumno;
+import org.iesalandalus.ejemploclase2.modelo.dto.Alumno;
+
 
 /**
  *
