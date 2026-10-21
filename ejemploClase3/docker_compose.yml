@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: dam_clase
+    environment:
+      - MYSQL_ROOT_PASSWORD: rootpassword
+      - MYSQL_DATABASE: instituto
+      - MYSQL_USER: java_user
+      - MYSQL_PASSWORD: java_password
+
+    volumes:
+      -./mysql_data:/var/lib/mysql
+      -./init:/docker-entrypoint-initdb.d
+    
+    ports:
+      - "3306:3306"
