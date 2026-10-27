@@ -21,11 +21,11 @@ public class Alumno {
         id = -1;
     }
 
-    public Alumno(String nombre, String apellidos, int edad, int id) {
+    public Alumno(int id, String nombre, String apellidos, int edad) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
-        this.id = id;
     }
 
     public String getNombre() {

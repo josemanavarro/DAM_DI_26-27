@@ -16,7 +16,7 @@ public class EjemploClase3 {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         FlatLightLaf.setup();
-        LogicaNegocio ln = new LogicaNegocio();
+        LogicaNegocioAlumno ln = new LogicaNegocioAlumno();
         JFrameVentanaPrincipal jfvp = new JFrameVentanaPrincipal(ln);
         jfvp.setVisible(true);
     }

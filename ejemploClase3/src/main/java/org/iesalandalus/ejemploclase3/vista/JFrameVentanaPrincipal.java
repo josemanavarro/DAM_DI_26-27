@@ -9,7 +9,7 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import org.iesalandalus.ejemploclase3.controlador.LogicaNegocio;
+import org.iesalandalus.ejemploclase3.controlador.LogicaNegocioAlumno;
 import org.iesalandalus.ejemploclase3.modelo.dto.Alumno;
 import org.iesalandalus.ejemploclase3.modelo.modelosTabla.AlumnoTableModel;
 
@@ -20,7 +20,7 @@ import org.iesalandalus.ejemploclase3.modelo.modelosTabla.AlumnoTableModel;
 public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameVentanaPrincipal.class.getName());
-    private LogicaNegocio ln;
+    private LogicaNegocioAlumno ln;
     private AlumnoTableModel atm;
     private TableRowSorter sorter;
     
@@ -28,7 +28,7 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
      * Creates new form JFrameVentanaPrincipal
      * @param ln
      */
-    public JFrameVentanaPrincipal(LogicaNegocio ln) {
+    public JFrameVentanaPrincipal(LogicaNegocioAlumno ln) {
         initComponents();
         this.ln = ln;        
         actualizarTabla();

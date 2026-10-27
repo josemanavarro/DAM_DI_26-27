@@ -5,7 +5,7 @@
 package org.iesalandalus.ejemploclase3.modelo.modelosTabla;
 
 import javax.swing.table.AbstractTableModel;
-import org.iesalandalus.ejemploclase3.controlador.LogicaNegocio;
+import org.iesalandalus.ejemploclase3.controlador.LogicaNegocioAlumno;
 import org.iesalandalus.ejemploclase3.modelo.dto.Alumno;
 
 
@@ -15,10 +15,10 @@ import org.iesalandalus.ejemploclase3.modelo.dto.Alumno;
  */
 public class AlumnoTableModel extends AbstractTableModel{
 
-    private LogicaNegocio ln;
+    private LogicaNegocioAlumno ln;
     
     
-    public AlumnoTableModel(LogicaNegocio ln){
+    public AlumnoTableModel(LogicaNegocioAlumno ln){
         this.ln = ln;
     }
     
