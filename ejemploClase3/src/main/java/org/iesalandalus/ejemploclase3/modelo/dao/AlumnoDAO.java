@@ -23,10 +23,10 @@ import org.iesalandalus.ejemploclase3.modelo.dto.Alumno;
 public class AlumnoDAO {
     private static final Logger LOGGER = Logger.getLogger(AlumnoDAO.class.getName());
     
-    private static final String SQL_SELECT_ALL = "SELECT id, nombre, apellidos, edad FROM alumnos ORDER by id";
-    private static final String SQL_SELECT_BY_ID = "SELECT id, nombre, apellidos, edad FROM alumnos WHERE id = ?";
-    private static final String SQL_INSERT = "INSERT INTO alumnos (nombre, apellidos, edad) VALUES (?,?,?)";
-    private static final String SQL_UPDATE = "UPDATE alumnos SET nombre = ?, apellidos = ?, edad = ? WHERE id = ?";
+    private static final String SQL_SELECT_ALL = "SELECT id, nombre, apellido, edad FROM alumnos ORDER by id";
+    private static final String SQL_SELECT_BY_ID = "SELECT id, nombre, apellido, edad FROM alumnos WHERE id = ?";
+    private static final String SQL_INSERT = "INSERT INTO alumnos (nombre, apellido, edad) VALUES (?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE alumnos SET nombre = ?, apellido = ?, edad = ? WHERE id = ?";
     private static final String SQL_DELETE ="DELETE FROM alumnos WHERE id=?";
     
     public AlumnoDAO(){}
@@ -45,7 +45,7 @@ public class AlumnoDAO {
             while (rs.next()){
                 int id = rs.getInt("id");
                 String nombre = rs.getString("nombre");
-                String apellidos = rs.getString("apellidos");
+                String apellidos = rs.getString("apellido");
                 int edad = rs.getInt("edad");
                 
                 alumnos.add(new Alumno(id, nombre, apellidos, edad));
@@ -71,7 +71,7 @@ public class AlumnoDAO {
             try (ResultSet rs = ps.executeQuery()){
                 if (rs.next()){
                     String nombre = rs.getString("nombre");
-                    String apellidos = rs.getString("apellidos");
+                    String apellidos = rs.getString("apellido");
                     int edad = rs.getInt("edad");
                     alumno = new Alumno(id, nombre, apellidos, edad);
                 }
