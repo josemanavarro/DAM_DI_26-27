@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: dam_clase
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
