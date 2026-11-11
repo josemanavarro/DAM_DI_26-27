@@ -37,14 +37,27 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     public JFrameVentanaPrincipal(LogicaNegocioAlumno lna) {
         this.lna = lna;    
         initComponents();
+        this.jMenuBar1.setVisible(false);
         if (this.lna != null) {
             this.lna.setLnmat(getLnmat());
         }
         getLnm().setLnmat(getLnmat());
         this.jPanelContenido.setLayout(new java.awt.BorderLayout());
-        this.jpa = new JPanelAlumnos(this);
-        jpa.setVisible(true);
-        this.jPanelContenido.add(jpa, java.awt.BorderLayout.CENTER);
+        JPanelCredenciales jpc = new JPanelCredenciales(this);
+        jpc.setVisible(true);
+        this.jPanelContenido.add(jpc, java.awt.BorderLayout.CENTER);
+    }
+
+    public void loginCorrecto() {
+        this.jMenuBar1.setVisible(true);
+        this.jPanelContenido.removeAll();
+        if (this.jpa == null) {
+            this.jpa = new JPanelAlumnos(this);
+        }
+        this.jpa.setVisible(true);
+        this.jPanelContenido.add(this.jpa, java.awt.BorderLayout.CENTER);
+        this.jPanelContenido.revalidate();
+        this.jPanelContenido.repaint();
     }
 
 
