@@ -28,8 +28,12 @@ CREATE TABLE alumnos (
     edad INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 -- Tabla de Módulos profesionales
 CREATE TABLE modulos (
+=======
+CREATE TABLE IF NOT EXISTS modulos (
+>>>>>>> 14f7310dd6b63d5f5dc547e690e11c98be94c7c3
     siglas VARCHAR(10) PRIMARY KEY,
     nombre VARCHAR(150) NOT NULL,
     curso INT NOT NULL,
